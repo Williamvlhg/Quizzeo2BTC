@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+
 }
 
 .logo {
@@ -39,4 +40,14 @@
 
 .read-the-docs {
   color: #888;
+}
+
+
+
+
+body{
+
+  background: rgb(148,129,116);
+  background: linear-gradient( rgb(80, 60, 60)0%, rgb(62, 50, 50) 100%);
+
 }
