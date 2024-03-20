@@ -1,5 +1,5 @@
 import './App.css';
-import Login from './pages/Login';  
+import Home from './pages/Home';  
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
 
         <Routes>
 
-            <Route path="/Login" element={<Login />} />
+            <Route path="/" element={<Home />} />
        
         </Routes>
 

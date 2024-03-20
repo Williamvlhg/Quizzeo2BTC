@@ -1,6 +1,6 @@
-import { Primary } from "./Primary";
-import { Secondary } from "./Secondary";
-
+import './index.css';
+import { Primary } from './Primary';
+import { Secondary } from './Secondary';  
 const Button = ({children, action}) => {
   return (
     <div onClick={action}>
