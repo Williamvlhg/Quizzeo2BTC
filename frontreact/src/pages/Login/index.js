@@ -44,7 +44,7 @@ const Login = () => {
                         <input type="text" placeholder="Nom" />
                         <input type="email" placeholder="Email" />
                         <input type="password" placeholder="Password" />
-                        <Button.Primary label={"S'inscrire"}/>
+                        <Button.Secondary label={"S'inscrire"} className="button-sign"/>
 
                     </form>
                 </div>
@@ -58,7 +58,7 @@ const Login = () => {
                         <div className='toggle-panel toggle-right'>
                             <h1> Bienvenue ! </h1>
                             <p>Incrivez-vous pour pouvoir utiliser notre site internet !</p>
-                            <Button.Secondary label={"S'inscrire"} onClick={handleToggle}/>
+                            <Button.Secondary label={"S'inscrire"} onClick={handleToggle} className="button-sign"/>
                         </div>
                     </div>
 
