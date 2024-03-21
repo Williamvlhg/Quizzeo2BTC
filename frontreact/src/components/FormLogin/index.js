@@ -1,5 +1,8 @@
 import './index.css'; // Assurez-vous d'avoir le fichier style.css dans le même répertoire
-
+import { FaGoogle } from 'react-icons/fa'
+import { FaFacebook } from'react-icons/fa'
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 export const CreateAccountPage = () => {
     return (
          <div className='container'>
@@ -7,10 +10,10 @@ export const CreateAccountPage = () => {
                 <form>
                     <h1>Connexion</h1>
                     <div className="social-icons">
-                        <a href="/" className="icon"><i className="fa-brands fa-google-plus-g"></i></a>
-                        <a href="/" className="icon"><i className="fa-brands fa-facebook-f"></i></a>
-                        <a href="/" className="icon"><i className="fa-brands fa-github"></i></a>
-                        <a href="/" className="icon"><i className="fa-brands fa-linkedin-in"></i></a>
+                        <a href="/" className="icon"><FaGoogle /></a>
+                        <a href="/" className="icon"><FaFacebook /></a>
+                        <a href="/" className="icon"><FaGithub /></a>
+                        <a href="/" className="icon"><FaLinkedin /></a>
                     </div>
                     <span>ou se connecter avec votre email</span>
                     <input type="email" placeholder="Email" />

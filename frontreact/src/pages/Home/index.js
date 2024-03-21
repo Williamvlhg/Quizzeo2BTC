@@ -7,22 +7,16 @@ function Home() {
   function navigationlogin() {
     window.location.href = "/login";
   }
-  function navigationsingin() {
-    window.location.href = "/login-s";
-  }
 
   return (
     <div className="home">
      <div className="background-img"></div>
-     <div className="content-home">
-        <img src={image} alt='' />
-        <div className='ButtonLogin'>
-          <Button.Primary Label="Se connecter" OnClick={navigationlogin}/>
-          <br></br>
-          <Button.Primary Label="S'inscrire" OnClick={navigationsingin}/>
-        </div>
+      <div className="content-home">
+          <img src={image} alt='' />
+          <div className='button-login'>
+            <Button.Primary label="Jouer" onClick={navigationlogin}/>
+          </div>
       </div>
-
     </div>
   );
 }
