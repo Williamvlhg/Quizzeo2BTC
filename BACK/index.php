@@ -39,15 +39,29 @@
        <button class="btn btn-dark btn-outline-dark" type="submit" name="submit" value="Valider"><h3>VALIDER<h3></button>
        <br>
        </form>
-       <a href="../PageInscription/index.php"> Vous ne possedez pas de compte ? Inscrivez-vous ! </a>
-       </form>
+       <h4>Inscription</h4>
+      <form  method="post" action="./signin.php" >
+
+      <label>Username</label>
+      <input type="text" name="username"><br>
       
-              <?php
-          }?>
+       <label for="email">E-mail</label>
+       <input type="email" name="email"><br>
+       <br>
+       <label for="pwd">Mot de passe</label>
+       <input type="password" name="pwd" ><br>
+       <br>
+       <button class="btn btn-dark btn-outline-dark" type="submit" name="submit" value="Valider"><h3>VALIDER<h3></button>
+       <br>
+       </form>
+
+            
+      
+ <?php } ?>
   
   
-  <?php include "processusconnexion.php"; ?>
-  <?php include "processusdeconnexion.php"; ?>
+
+
   
   
   

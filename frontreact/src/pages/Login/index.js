@@ -25,8 +25,8 @@ const Login = () => {
                             <a href="/" className="icon"><FaLinkedin /></a>
                         </div>
                         <span>ou se connecter avec votre email</span>
-                        <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Password" />
+                        <input type="email" placeholder="E-mail" />
+                        <input type="password" placeholder="Mot de passe" />
                         <a href='/'>Mot de passé oublié ?</a>
                         <Button.Primary label={"Se connecter"}/>
                     </form>
@@ -41,9 +41,9 @@ const Login = () => {
                             <a href="/" className="icon"><FaLinkedin /></a>
                         </div>
                         <span>ou s'inscrire avec votre email personnel</span>
-                        <input type="text" placeholder="Nom" />
-                        <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Password" />
+                        <input type="text" placeholder="Nom d'utilisateur" />
+                        <input type="email" placeholder="E-mail" />
+                        <input type="password" placeholder="Mot de passe" />
                         <Button.Secondary label={"S'inscrire"} className="button-sign"/>
 
                     </form>
