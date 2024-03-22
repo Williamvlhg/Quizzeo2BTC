@@ -5,18 +5,42 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { useState } from 'react';
 import Button from './../../components/Button';
+import axios from 'axios';
 const Login = () => {
+
+
     const [isActive, setIsActive] = useState(false);
     const handleToggle = () => {
         setIsActive(!isActive);
     };
 
-   
+    const [inputs, setInputs] = useState({})
+
+    const handleChange = (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
+        setInputs(values => ({...values, [name]: value}));
+    }
+
+    const SubmitLogin = (e) => {
+        e.preventDefault();
+
+        axios.post('http://localhost:8888/index.php', inputs)
+        console.log(inputs);
+
+    }
+    const SubmitSignin = (e) => {
+        e.preventDefault();
+
+        axios.post('http://localhost:8888/signin.php', inputs)
+        console.log(inputs);
+
+    }
     return (
         <div className='page'>
             <div className={`container ${isActive ? 'active' : ''}`}>
                 <div className='form-container sign-in'>
-                    <form>
+                    <form method='POST' onSubmit={SubmitLogin}>
                         <h1>Connexion</h1>
                         <div className="social-icons">
                             <a href="/" className="icon"><FaGoogle /></a>
@@ -25,25 +49,18 @@ const Login = () => {
                             <a href="/" className="icon"><FaLinkedin /></a>
                         </div>
                         <span>ou se connecter avec votre email</span>
-                        <input type="email" placeholder="E-mail" />
-                        <input type="password" placeholder="Mot de passe" />
+                        <input type="email" name='email' placeholder="E-mail" onChange={handleChange} />
+                        <input type="password" name='password' placeholder="Mot de passe" onChange={handleChange} />
                         <a href='/'>Mot de passé oublié ?</a>
                         <Button.Primary label={"Se connecter"}/>
                     </form>
                 </div>
                 <div className='form-container sign-up'>
-                    <form>
-                        <h1>Inscription</h1>
-                        <div className="social-icons">
-                            <a href="/" className="icon"><FaGoogle /></a>
-                            <a href="/" className="icon"><FaFacebook /></a>
-                            <a href="/" className="icon"><FaGithub /></a>
-                            <a href="/" className="icon"><FaLinkedin /></a>
-                        </div>
-                        <span>ou s'inscrire avec votre email personnel</span>
-                        <input type="text" placeholder="Nom d'utilisateur" />
-                        <input type="email" placeholder="E-mail" />
-                        <input type="password" placeholder="Mot de passe" />
+                    <form method='POST' onSubmit={SubmitSignin}>
+                        <h1>Inscription</h1> 
+                        <input type="text" name='username' placeholder="Nom d'utilisateur" onChange={handleChange} />
+                        <input type="email" name='email' placeholder="E-mail" onChange={handleChange} />
+                        <input type="password" name='password' placeholder="Mot de passe" onChange={handleChange} />
                         <Button.Secondary label={"S'inscrire"} className="button-sign"/>
 
                     </form>

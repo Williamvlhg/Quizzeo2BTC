@@ -1,12 +1,14 @@
 <?php
 
-    session_start();
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: *");
+$user = json_decode( file_get_contents('php://input'));
 
     include "./database.php";
     
-            $u = $_POST["username"];
-            $e = $_POST["email"];
-            $p = $_POST["pwd"];
+            $u = $user->username;
+            $e = $user->email;
+            $p = $user->password;
       
         echo $p;
         $ph = password_hash($p, PASSWORD_DEFAULT); 

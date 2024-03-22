@@ -4,7 +4,7 @@
         include "./database.php";
 
         $e = $_POST["email"];
-        $password = $_POST['pwd'];
+        $password = $_POST['password'];
 
 
         $sql = "SELECT * FROM user WHERE mail = :mail"; 
@@ -19,7 +19,7 @@
                 if(password_verify($password,$data[0]['password']))
                 {
                 $_SESSION['id'] = $data[0]['id_user'];
-                echo "Password verified";
+                echo "Mot de passe vérifié";
                 }
                 else{
                         echo "Mot de passe incorrect";
