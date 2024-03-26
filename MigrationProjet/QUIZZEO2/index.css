@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-image: url('http://localhost:8888/assets/background-blurred.png');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button{
+    background: rgb(149,98,41);
+    background: linear-gradient(90deg, rgba(149,98,41,1) 0%, rgba(198,172,104,1) 23%, rgba(228,203,129,1) 50%, rgba(198,172,104,1) 76%, rgba(149,98,41,1) 100%);
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+.hidden{
+    background: rgb(149,98,41);
+    background: linear-gradient(90deg, rgba(149,98,41,1) 0%, rgba(198,172,104,1) 23%, rgba(228,203,129,1) 50%, rgba(198,172,104,1) 76%, rgba(149,98,41,1) 100%);
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border-color: #fff;
+  }
