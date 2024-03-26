@@ -14,7 +14,7 @@ function Home() {
       <div className="content-home">
           <img src={image} alt='' />
           <div className='button-login'>
-            <Button.Primary label="Jouer" onClick={navigationlogin}/>
+            <Button.Primary label="Jouer" o nClick={navigationlogin}/>
           </div>
       </div>
     </div>

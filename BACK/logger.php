@@ -20,6 +20,7 @@
                 {
                 $_SESSION['id'] = $data[0]['id_user'];
                 echo "Mot de passe vérifié";
+                header ('Location : http://localhost:3000/main');
                 }
                 else{
                         echo "Mot de passe incorrect";

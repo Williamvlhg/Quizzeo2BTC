@@ -1,7 +1,9 @@
 <?php
+
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
 $user = json_decode( file_get_contents('php://input'));
+session_start();
         include "./database.php";
         $e = $user->email;
         $password = $user->password;
@@ -18,8 +20,8 @@ $user = json_decode( file_get_contents('php://input'));
                 $data = $result->fetchAll();
                 if(password_verify($password,$data[0]['password']))
                 {
-                $_SESSION['id'] = $data[0]['id_user'];
-                echo "ok";
+                $_SESSION['user'] = $data[0]['id_user'];
+
                 }
                 else{
                         echo "Mot de passe incorrect";

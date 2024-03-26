@@ -27,6 +27,7 @@ const Login = () => {
 
         axios.post('http://localhost:8888/index.php', inputs)
         console.log(inputs);
+        window.location.href = "/main"
 
     }
     const SubmitSignin = (e) => {
