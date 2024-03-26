@@ -1,0 +1,13 @@
+.content{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(3, 3, 3, 0.6); /* Black w/opacity/see-through */
+    border: 2px solid #5d5656;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+
+}
