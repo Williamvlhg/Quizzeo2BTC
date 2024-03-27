@@ -1,7 +1,9 @@
-<?php include '../header.php'; 
-      if(!isset($_GET['i'])){
-        header("Location: /content");
-      };
+<?php 
+include '../header.php';
+include '../processus/verification.php';
+if (!isset($_GET['i'])) {
+    header("Location: /content");
+};
 ?>
 <div class="content-wrapper">
     <h1><?php echo $_GET['i'] ?> a bien été effectué</h1>

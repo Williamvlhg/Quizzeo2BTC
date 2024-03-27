@@ -13,13 +13,13 @@ function validateForm() {
     // Check if passwords match
     if (password !== confirmPassword) {
       alert("Les deux mots de passes sont différents");
-      return false; // Prevent form submission
+      return false; 
     } else if (confirm('Etes-vous sur de vouloir enregistrer vos modifications ? ')){
         return true; 
     } else {
         return false;
     }
-// Allow form submission
+
   }
   
 function deconnexion(){
