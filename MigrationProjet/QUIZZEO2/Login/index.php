@@ -1,5 +1,10 @@
-<?php include '../header.php'
+<?php include '../header.php';
+    session_start();
+    if(isset($_SESSION['id'])){
+        header("Location: /content");
+    } 
 ?>
+
 <div class="container" id="container">
         <div class="form-container sign-up">
             <form action="../processus/signup.php" method="POST">
@@ -14,7 +19,7 @@
                 <input type="text" name="name" placeholder="Name">
                 <input type="email" name="email" placeholder="Email">
                 <input type="password" name="password" placeholder="Password">
-                <button>Sign Up</button>
+                <button onclick="form.submit();">Sign Up</button>
             </form>
         </div>
         <div class="form-container sign-in">
@@ -30,7 +35,7 @@
                 <input type="email" name="email" placeholder="Email">
                 <input type="password" name="password" placeholder="Password">
                 <a href="#">Forget Your Password?</a>
-                <button>Sign In</button>
+                <button onclick="form.submit();">Sign In</button>
             </form>
         </div>
         <div class="toggle-container">

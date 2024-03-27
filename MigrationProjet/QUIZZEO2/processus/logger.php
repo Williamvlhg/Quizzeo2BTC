@@ -17,9 +17,11 @@ if ($result->rowCount() > 0) {
         if (password_verify($password, $data[0]['password'])) {
                 $_SESSION['id'] = $data[0]['id_user'];
                 echo "Mot de passe vérifié";
+                header("location: /Content");
         } else {
                 echo "Mot de passe incorrect";
         }
+        
 } else {
         echo "E-mail incorrect";
 }

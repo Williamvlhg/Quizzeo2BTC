@@ -49,3 +49,19 @@ button{
     background-color: transparent;
     border-color: #fff;
   }
+.warning{
+    background: rgb(149, 41, 41);
+    background: linear-gradient(90deg, rgb(149, 41, 41) 0%, rgb(198, 104, 104) 23%, rgb(228, 129, 129) 50%, rgb(198, 104, 104) 76%, rgb(149, 41, 41) 100%);
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border-color: #fff;
+}

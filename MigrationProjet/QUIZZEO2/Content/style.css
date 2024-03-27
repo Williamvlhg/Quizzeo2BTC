@@ -1,0 +1,118 @@
+.content-wrapper{
+    height: 80%;
+    width: 80%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#welcome{
+    font-size: 10cap;
+    color: white;
+}
+.container {
+    background: #191919;
+    min-height: 100vh;
+    font-family: Montserrat, sans-serif;
+  }
+  
+  nav a {
+      font-size: 40px;
+      color: #fff;
+      text-decoration: none;
+      padding: 20px;
+      text-align: center;
+  }
+  
+  nav {
+      position: fixed;
+      left: 0;
+      z-index: 50;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      height: 100vh;
+      background: #d5c077;
+  }
+  
+  section {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 0;
+      opacity: 0;
+      transition: all ease-in 1s;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    
+  } 
+  
+  section h1 {
+      color: #fff;
+      font-size: 50px;
+      text-transform: uppercase;
+      opacity: 0;
+      padding-top: 15vh;
+
+  }
+
+  section .content{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      opacity: 0;
+  }
+  
+
+  section:target {
+      opacity: 1;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+  }
+  
+  section:target h1 {
+      opacity: 0;
+      animation: 2s fadeIn forwards .5s;
+  }
+
+  section:target .content{
+    opacity: 0;
+    animation: 2s fadeIn forwards .5s;
+    width: 80%;
+  }
+  
+  #first {
+    background-color: #9d9274;
+  }
+  #second {
+    background-color: #7c745e;
+  }
+  
+  #third {
+    background-color: #776652;
+  }
+  
+  #fourth {
+    background-color: #755c3c;
+  }
+  .content input{
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+  }
+  
+  @keyframes fadeIn {
+    100% { opacity:1 }
+}
